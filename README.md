@@ -6,7 +6,7 @@
 - ofxShader
 - ofxGui
 
-*You do not need to use ofxShader, you can use ofShader if you really want to. You don't even have to use ofxGui if you want*
+*You do not need to use ofxShader, you can use ofShader if you really want to. You don't even have to use ofxGui if you want, but it does help in sending signals around*
 
 # What is this?
 
