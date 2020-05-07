@@ -30,19 +30,16 @@ void ofApp::update(){
     viewer.color.y = ofLerp(viewer.color.y, future->uiColor->y, time);
     viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
       
-//      future->cross.update();
-      
-      if (future->cross.crossSwitch) {
+     if (future->cross.crossSwitch) {
           viewer.cross.uiAmont = future->cross.uiAmont;
           viewer.cross.uiSpeed = future->cross.uiSpeed;
-//          viewer.cross.edgeA = future->cross.edgeA;
-//          viewer.cross.edgeB = future->cross.edgeB;
+      }
+      else
+      {
+         viewer.cross.uiAmont = 0;
+         viewer.cross.uiSpeed = 0.0;
       }
   }
-    if (future->cross.crossSwitch) {
-        viewer.cross.uiAmont = future->cross.uiAmont;
-        viewer.cross.uiSpeed = future->cross.uiSpeed;
-    }
 }
 
 //--------------------------------------------------------------
