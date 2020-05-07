@@ -11,11 +11,20 @@
 //--------------------------------------------------------------
 void settingWindow::setup(){
   ofSetWindowTitle("controls");
-  
+    
+    bHide = true;
+    cross.setup();
   gui.setup();
   gui.add(uiAction.set("action", false));
   gui.add(uiActionSpeed.set("action speed", 0, 0, 1));
   gui.add(uiColor.set("color", ofVec3f(0), ofVec3f(0), ofVec3f(1)));
+    
+    gui.add(cross.crossSwitch.set("Cross switch", false));
+    gui.add(cross.uiAmont.set("Cross amount", 1, 1, 15));
+    gui.add(cross.uiSpeed.set("Cross speed", 0, 1.0, 30.0));
+//    gui.add(cross.edgeA.set("Cross X", 15.0, 10.0, 30.0));
+//    gui.add(cross.edgeB.set("Cross Y", 40.0, 10.0, 90.0));
+    
   
   fbo.allocate(640, 360);
   fbo.begin();
@@ -35,15 +44,24 @@ void settingWindow::update(){
   shader.render();
   shader.draw(0, 0);
   fbo.end();
+    
+    fbo.begin();
+    cross.draw();
+    fbo.end();
 }
 
 //--------------------------------------------------------------
 void settingWindow::draw(){
   fbo.draw(0, 0);
+    
+//    if (cross.crossSwitch) {
+//           cross.draw();
+//       }
   
   if (bHide){
     gui.draw();
   }
+    
 }
 
 //--------------------------------------------------------------
@@ -57,4 +75,5 @@ void settingWindow::keyPressed(int key){
 void settingWindow::windowResized(int w, int h){
   shader.allocate(w, h);
   fbo.allocate(w, h);
+
 }

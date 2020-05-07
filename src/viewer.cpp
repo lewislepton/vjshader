@@ -10,6 +10,7 @@
 
 //--------------------------------------------------------------
 void viewer::setup(){
+    cross.setup();
   fbo.allocate(ofGetWidth(), ofGetHeight());
   fbo.begin();
   ofClear(255);
@@ -28,6 +29,11 @@ void viewer::update(){
   shader.render();
   shader.draw(0, 0, ofGetWidth(), ofGetHeight());
   fbo.end();
+    
+    fbo.begin();
+    cross.draw();
+    fbo.end();
+    
 }
 
 //--------------------------------------------------------------

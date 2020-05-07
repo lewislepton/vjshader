@@ -9,9 +9,9 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxGui.h"
+//#include "ofxGui.h"
 #include "ofxShader.h"
-#include "ofxShaderFilter.h"
+#include "crosser.hpp"
 #include "viewer.hpp"
 #include "settingWindow.hpp"
 
@@ -27,11 +27,6 @@ public:
   void gotMessage(ofMessage msg);
   
 //  CONTROLS
-  ofxPanel gui;
-  
-  ofxShaderFilter curShader;
-  ofxShaderFilter futShader;
-  
   viewer viewer;
   
   shared_ptr<settingWindow> future;

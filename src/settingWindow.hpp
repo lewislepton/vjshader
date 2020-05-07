@@ -12,6 +12,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxShaderFilter.h"
+#include "crosser.hpp"
 
 class settingWindow : public ofBaseApp {
 public:
@@ -23,13 +24,16 @@ public:
   void windowResized(int w, int h);
   
   ofxPanel gui;
+//  ofxPanel crossGui;
   ofParameter <bool> uiAction;
   ofParameter <float> uiActionSpeed;
   ofParameter <ofVec3f> uiColor;
   
   ofxShaderFilter shader;
+    
   
   ofFbo fbo;
+    crosser cross;
   
   bool bHide;
 };

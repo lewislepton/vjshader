@@ -12,6 +12,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxShaderFilter.h"
+#include "crosser.hpp"
 
 class viewer : public ofBaseApp {
 public:
@@ -23,13 +24,12 @@ public:
   void windowResized(int w, int h);
   
   ofxShaderFilter shader;
+    
+    crosser cross;
   
   ofVec3f color;
   
   ofFbo fbo;
-  
-  bool action;
-  float actionSpeed;
 };
 
 #endif /* viewer_hpp */

@@ -13,7 +13,7 @@ void ofApp::setup(){
   ofDisableArbTex();
   ofSetWindowTitle("VJshader");
   ofSetFrameRate(60);
-  
+    
   viewer.setup();
 }
 
@@ -29,7 +29,20 @@ void ofApp::update(){
     viewer.color.x = ofLerp(viewer.color.x, future->uiColor->x, time);
     viewer.color.y = ofLerp(viewer.color.y, future->uiColor->y, time);
     viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
+      
+//      future->cross.update();
+      
+      if (future->cross.crossSwitch) {
+          viewer.cross.uiAmont = future->cross.uiAmont;
+          viewer.cross.uiSpeed = future->cross.uiSpeed;
+//          viewer.cross.edgeA = future->cross.edgeA;
+//          viewer.cross.edgeB = future->cross.edgeB;
+      }
   }
+    if (future->cross.crossSwitch) {
+        viewer.cross.uiAmont = future->cross.uiAmont;
+        viewer.cross.uiSpeed = future->cross.uiSpeed;
+    }
 }
 
 //--------------------------------------------------------------
