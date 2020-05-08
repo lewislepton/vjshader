@@ -12,8 +12,10 @@
 void settingWindow::setup(){
   ofSetWindowTitle("controls");
     
+    
     bHide = true;
     cross.setup();
+    mySong.setup();
   gui.setup();
   gui.add(uiAction.set("action", false));
   gui.add(uiActionSpeed.set("action speed", 0, 0, 1));
@@ -22,6 +24,8 @@ void settingWindow::setup(){
     gui.add(cross.crossSwitch.set("Cross switch", false));
     gui.add(cross.uiAmont.set("Cross amount", 1, 1, 25));
     gui.add(cross.uiSpeed.set("Cross speed", 0, 1, 80));
+    gui.add(mySong.audio.set("Audio switch", false));
+    gui.add(mySong.volume.set("Volune",0.5,0.0,1.0));
 //    gui.add(cross.edgeA.set("Cross X", 15.0, 10.0, 30.0));
 //    gui.add(cross.edgeB.set("Cross Y", 40.0, 10.0, 90.0));
     
@@ -51,6 +55,9 @@ void settingWindow::update(){
         cross.draw();
         fbo.end();
     }
+    
+    mySong.update();
+            
 }
 
 //--------------------------------------------------------------

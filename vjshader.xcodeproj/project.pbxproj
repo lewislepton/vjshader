@@ -10,6 +10,7 @@
 		1413B27FD107F2F631430F81 /* ArHosekSkyModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2DE208C5D0E79B2E8881C /* ArHosekSkyModel.c */; };
 		1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907C5B5E104864A2D3A25745 /* ofxToggle.cpp */; };
 		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
+		593D4E262465807600324D8D /* musicIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593D4E242465807600324D8D /* musicIn.cpp */; };
 		598314E4245F1B0000E9A33B /* crosser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 598314E2245F1B0000E9A33B /* crosser.cpp */; };
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		688051E65852E8B454EF1BBA /* ofxTextureCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58A4A30761A6DC12BB1FABE /* ofxTextureCube.cpp */; };
@@ -55,6 +56,8 @@
 		44B351490B620D04E1E7C52D /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../../addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
 		489B196944B06ADC2A071076 /* ofxColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxColorPicker.h; path = ../../../addons/ofxGui/src/ofxColorPicker.h; sourceTree = SOURCE_ROOT; };
 		52AFA1F08C420992CAAAE648 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
+		593D4E242465807600324D8D /* musicIn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = musicIn.cpp; sourceTree = "<group>"; };
+		593D4E252465807600324D8D /* musicIn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = musicIn.hpp; sourceTree = "<group>"; };
 		598314E2245F1B0000E9A33B /* crosser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crosser.cpp; sourceTree = "<group>"; };
 		598314E3245F1B0000E9A33B /* crosser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = crosser.hpp; sourceTree = "<group>"; };
 		5F33742F6E64F6DFF955F600 /* ArHosekSkyModelData_CIEXYZ.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ArHosekSkyModelData_CIEXYZ.h; path = ../../../addons/ofxShader/src/skylight/ArHosekSkyModelData_CIEXYZ.h; sourceTree = SOURCE_ROOT; };
@@ -678,6 +681,8 @@
 				BE29A2065D0538796FC13120 /* viewer.hpp */,
 				598314E2245F1B0000E9A33B /* crosser.cpp */,
 				598314E3245F1B0000E9A33B /* crosser.hpp */,
+				593D4E242465807600324D8D /* musicIn.cpp */,
+				593D4E252465807600324D8D /* musicIn.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -784,6 +789,7 @@
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				691E24C8AB90BD7A25F46B52 /* viewer.cpp in Sources */,
 				F63D457566962151BE77BDBE /* settingWindow.cpp in Sources */,
+				593D4E262465807600324D8D /* musicIn.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,

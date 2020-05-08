@@ -26,6 +26,9 @@ public:
     ofParameter<float> edgeA;
     ofParameter<float> edgeB;
     
+    
+    
+    
     bool crossHide = false;
 };
 

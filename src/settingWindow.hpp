@@ -13,6 +13,7 @@
 #include "ofxGui.h"
 #include "ofxShaderFilter.h"
 #include "crosser.hpp"
+#include "musicIn.hpp"
 
 class settingWindow : public ofBaseApp {
 public:
@@ -34,6 +35,7 @@ public:
   
   ofFbo fbo;
     crosser cross;
+    musicIn mySong;
   
   bool bHide;
 };
