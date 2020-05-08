@@ -16,21 +16,20 @@
 #include "settingWindow.hpp"
 
 class ofApp : public ofBaseApp {
+    
 public:
-  void setup();
-  void update();
-  void draw();
-
-  void keyPressed(int key);
-  void keyReleased(int key);
-  void windowResized(int w, int h);
-  void gotMessage(ofMessage msg);
+    void setup();
+    void update();
+    void draw();
+    
+    void keyPressed(int key);
+    void keyReleased(int key);
+    void windowResized(int w, int h);
+    void gotMessage(ofMessage msg);
     void actionClickerino();
-
-
-  
-//  CONTROLS
-  viewer viewer;
-  
-  shared_ptr<settingWindow> future;
+    
+    //  CONTROLS
+    viewer viewer;
+    
+    shared_ptr<settingWindow> future;
 };

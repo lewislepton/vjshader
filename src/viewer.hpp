@@ -15,21 +15,22 @@
 #include "crosser.hpp"
 
 class viewer : public ofBaseApp {
+    
 public:
-  void setup();
-  void update();
-  void draw();
-  
-  void keyPressed(int key);
-  void windowResized(int w, int h);
-  
-  ofxShaderFilter shader;
+    void setup();
+    void update();
+    void draw();
+    
+    void keyPressed(int key);
+    void windowResized(int w, int h);
+    
+    ofxShaderFilter shader;
     
     crosser cross;
-  
-  ofVec3f color;
-  
-  ofFbo fbo;
+    
+    ofVec3f color;
+    
+    ofFbo fbo;
 };
 
 #endif /* viewer_hpp */

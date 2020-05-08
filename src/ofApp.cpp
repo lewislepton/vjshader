@@ -10,16 +10,16 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-  ofDisableArbTex();
-  ofSetWindowTitle("VJshader");
-  ofSetFrameRate(60);
-   future->button.addListener(this, &ofApp::actionClickerino);
-  viewer.setup();
+    ofDisableArbTex();
+    ofSetWindowTitle("VJshader");
+    ofSetFrameRate(60);
+    future->button.addListener(this, &ofApp::actionClickerino);
+    viewer.setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-  viewer.update();
+    viewer.update();
 
 //  if (future->uiAction){
 //    float time = 0;
@@ -45,32 +45,32 @@ void ofApp::update(){
 //---------------------------------------
 void ofApp::actionClickerino(){
     float time = 0;
-       
-       time = ofMap(future->uiActionSpeed, 0.0, 1.0, 0.001, 0.06);
-       
-       viewer.color.x = ofLerp(viewer.color.x, future->uiColor->x, time);
-       viewer.color.y = ofLerp(viewer.color.y, future->uiColor->y, time);
-       viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
-         
-        if (future->cross.crossSwitch) {
-             viewer.cross.uiAmont = future->cross.uiAmont;
-             viewer.cross.uiSpeed = future->cross.uiSpeed;
-         }
-         else
-         {
-            viewer.cross.uiAmont = 0;
-            viewer.cross.uiSpeed = 0.0;
-         }
+    
+    time = ofMap(future->uiActionSpeed, 0.0, 1.0, 0.001, 0.06);
+    
+    viewer.color.x = ofLerp(viewer.color.x, future->uiColor->x, time);
+    viewer.color.y = ofLerp(viewer.color.y, future->uiColor->y, time);
+    viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
+    
+    if (future->cross.crossSwitch) {
+        viewer.cross.uiAmont = future->cross.uiAmont;
+        viewer.cross.uiSpeed = future->cross.uiSpeed;
+    }
+    else
+    {
+        viewer.cross.uiAmont = 0;
+        viewer.cross.uiSpeed = 0.0;
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-  viewer.draw();
+    viewer.draw();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-  viewer.keyPressed(key);
+    viewer.keyPressed(key);
 }
 
 //--------------------------------------------------------------
@@ -80,7 +80,7 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-  viewer.windowResized(w, h);
+    viewer.windowResized(w, h);
 }
 
 //--------------------------------------------------------------

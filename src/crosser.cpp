@@ -15,7 +15,7 @@ void crosser::setup(){
 //-------------------------------------------
 
 void crosser::update(){
-  
+    
 }
 //-------------------------------------------
 
@@ -37,8 +37,5 @@ void crosser::draw(){
 
 void crosser::keyPressed(int key){
     
-//    if (key == 'c') {
-//        crossHide = !crossHide;
-//    }
 }
 

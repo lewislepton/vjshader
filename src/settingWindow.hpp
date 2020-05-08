@@ -16,31 +16,29 @@
 #include "musicIn.hpp"
 
 class settingWindow : public ofBaseApp {
+    
 public:
-  void setup();
-  void update();
-  void draw();
-  
-  void keyPressed(int key);
-  void windowResized(int w, int h);
+    void setup();
+    void update();
+    void draw();
     
-  
-  ofxPanel gui;
-//  ofxPanel crossGui;
-  ofParameter <bool> uiAction;
-  ofParameter <float> uiActionSpeed;
-  ofParameter <ofVec3f> uiColor;
-  
-  ofxShaderFilter shader;
+    void keyPressed(int key);
+    void windowResized(int w, int h);
     
-  
-  ofFbo fbo;
+    
+    ofxPanel gui;
+    ofParameter <bool> uiAction;
+    ofParameter <float> uiActionSpeed;
+    ofParameter <ofVec3f> uiColor;
+    
+    ofxShaderFilter shader;
+    ofFbo fbo;
+    ofxButton button;
+    
     crosser cross;
     musicIn mySong;
     
-    ofxButton button;
-  
-  bool bHide;
+    bool bHide;
 };
 
 #endif /* settingWindow_hpp */
