@@ -9,22 +9,24 @@
 #define musicIn_hpp
 
 #include "ofMain.h"
+#include "crosser.hpp"
 
 class musicIn : public ofBaseApp {
     
-public:
+public        :
     void setup();
     void update();
     void draw();
     
-    ofParameter<bool> audio;
+     ofParameter<bool> audio;
     ofParameter<float> volume;
-    ofParameter<float> decay;
+       ofParameter<float> decay;
 
+    
     
     ofSoundPlayer sound;
     
-    float *fft;
+               float *fft;
     float *soundSpectrum;
     int bands;
 };

@@ -23,6 +23,7 @@ public:
   
   void keyPressed(int key);
   void windowResized(int w, int h);
+    
   
   ofxPanel gui;
 //  ofxPanel crossGui;
@@ -36,6 +37,8 @@ public:
   ofFbo fbo;
     crosser cross;
     musicIn mySong;
+    
+    ofxButton button;
   
   bool bHide;
 };

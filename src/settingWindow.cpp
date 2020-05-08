@@ -11,16 +11,16 @@
 //--------------------------------------------------------------
 void settingWindow::setup(){
   ofSetWindowTitle("controls");
-    
-    
     bHide = true;
     cross.setup();
     mySong.setup();
+    
+    
   gui.setup();
-  gui.add(uiAction.set("action", false));
+//  gui.add(uiAction.set("action", false));
   gui.add(uiActionSpeed.set("action speed", 0, 0, 1));
   gui.add(uiColor.set("color", ofVec3f(0), ofVec3f(0), ofVec3f(1)));
-    
+    gui.add(button.setup("PARTY", 25, 25));
     gui.add(cross.crossSwitch.set("Cross switch", false));
     gui.add(cross.uiAmont.set("Cross amount", 1, 1, 25));
     gui.add(cross.uiSpeed.set("Cross speed", 0, 1, 80));
@@ -84,3 +84,4 @@ void settingWindow::windowResized(int w, int h){
   shader.allocate(w, h);
   fbo.allocate(w, h);
 }
+

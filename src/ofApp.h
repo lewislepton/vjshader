@@ -25,6 +25,9 @@ public:
   void keyReleased(int key);
   void windowResized(int w, int h);
   void gotMessage(ofMessage msg);
+    void actionClickerino();
+
+
   
 //  CONTROLS
   viewer viewer;
