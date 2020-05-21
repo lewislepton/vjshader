@@ -24,6 +24,7 @@ public:
     
     void keyPressed(int key);
     void windowResized(int w, int h);
+    void toggleDirection();
     
     
     ofxPanel gui;

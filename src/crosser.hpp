@@ -20,11 +20,14 @@ public:
     void keyPressed(int key);
     
     ofxPanel gui;
+    ofParameter <bool> turnSide;
     ofParameter<bool> crossSwitch;
     ofParameter<int> uiAmont;
     ofParameter<float> uiSpeed;
     ofParameter<float> edgeA;
     ofParameter<float> edgeB;
+    
+    bool crossSide;
     
     bool crossHide = false;
 };

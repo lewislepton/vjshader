@@ -27,6 +27,7 @@ public:
     void windowResized(int w, int h);
     void gotMessage(ofMessage msg);
     void actionClickerino();
+    void toggleDirection();
     
     //  CONTROLS
     viewer viewer;

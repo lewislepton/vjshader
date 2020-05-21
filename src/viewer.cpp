@@ -10,6 +10,7 @@
 
 //--------------------------------------------------------------
 void viewer::setup(){
+    ofSetWindowTitle("SettingsWindow");
     cross.setup();
     fbo.allocate(ofGetWidth(), ofGetHeight());
     fbo.begin();
@@ -53,3 +54,5 @@ void viewer::windowResized(int w, int h){
     shader.allocate(w, h);
     fbo.allocate(w, h);
 }
+
+//------------------------------
