@@ -43,13 +43,8 @@ void ofApp::actionClickerino(){
         viewer.cross.uiSpeed = 0.0;
     }
     
-    if (!future->cross.turnSide) {
         viewer.cross.crossSide = future->cross.crossSide;
-    }
-//    else
-//    {
-//        viewer.cross.crossSide = future->cross.crossSide;
-//    }
+    
     
 }
 
