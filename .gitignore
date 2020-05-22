@@ -8,7 +8,17 @@ Release*/
 *.app/
 *.pyc
 .svn/
- 
+# new
+Project.xcconfig
+Makefile
+config.make
+img/
+openFrameworks-Info.plist
+vjshader.srctrlbm
+vjshader.srctrldb
+vjshader.srctrlprj
+vjshader.xcodeproj
+##
  
 #XCode
 *.pbxuser
