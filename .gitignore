@@ -12,7 +12,7 @@ Release*/
 Project.xcconfig
 Makefile
 config.make
-img/
+img
 openFrameworks-Info.plist
 vjshader.srctrlbm
 vjshader.srctrldb
