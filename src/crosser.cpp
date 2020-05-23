@@ -7,7 +7,6 @@
 
 #include "crosser.hpp"
 
-
 void crosser::setup(){
     crossSide = true;
 }
@@ -37,9 +36,5 @@ void crosser::draw(){
         }
     }
 }
-//-------------------------------------------
 
-void crosser::keyPressed(int key){
-    
-}
 

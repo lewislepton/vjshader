@@ -23,11 +23,8 @@ public:
     void draw();
     
     void keyPressed(int key);
-    void keyReleased(int key);
     void windowResized(int w, int h);
-    void gotMessage(ofMessage msg);
-    void actionClickerino();
-    void toggleDirection();
+    void actionClick();
     
     //  CONTROLS
     viewer viewer;

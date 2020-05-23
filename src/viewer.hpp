@@ -25,12 +25,10 @@ public:
     void windowResized(int w, int h);
     
     ofxShaderFilter shader;
+    ofVec3f color;
+    ofFbo fbo;
     
     crosser cross;
-    
-    ofVec3f color;
-    
-    ofFbo fbo;
 };
 
 #endif /* viewer_hpp */

@@ -17,19 +17,16 @@ public:
     void setup();
     void update();
     void draw();
-    void keyPressed(int key);
     
     ofxPanel gui;
     ofParameter <bool> turnSide;
-    ofParameter<bool> crossSwitch;
+    ofParameter<bool> crossLoader;
     ofParameter<int> uiAmont;
     ofParameter<float> uiSpeed;
     ofParameter<float> edgeA;
     ofParameter<float> edgeB;
     
     bool crossSide;
-    
-    bool crossHide = false;
 };
 
 #endif /* crosser_hpp */

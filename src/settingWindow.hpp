@@ -34,12 +34,12 @@ public:
     
     ofxShaderFilter shader;
     ofFbo fbo;
-    ofxButton button;
+    ofxButton sender;
     
     crosser cross;
     musicIn mySong;
     
-    bool bHide;
+    bool showGui;
 };
 
 #endif /* settingWindow_hpp */

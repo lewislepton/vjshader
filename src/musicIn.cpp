@@ -23,17 +23,15 @@ void musicIn::setup(){
 //-------------------------------------------------------
 void musicIn::update(){
     ofSoundUpdate();
-    
     sound.setVolume(volume);
-    
     soundSpectrum = ofSoundGetSpectrum(bands);
     
-        for (int i = 0; i < bands; i++) {
-            fft[i] *= decay;
-            if (fft[i] < soundSpectrum[i]) {
-                fft[i] = soundSpectrum[i];
-            }
+    for (int i = 0; i < bands; i++) {
+        fft[i] *= decay;
+        if (fft[i] < soundSpectrum[i]) {
+            fft[i] = soundSpectrum[i];
         }
+    }
     
     if (!audio)
     {
@@ -45,10 +43,3 @@ void musicIn::update(){
     }
 }
 
-//-------------------------------------------------------
-void musicIn::draw(){
-    
-    
-}
-
-//-------------------------------------------------------

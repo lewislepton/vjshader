@@ -13,7 +13,7 @@ void ofApp::setup(){
     ofDisableArbTex();
     ofSetWindowTitle("VJshader");
     ofSetFrameRate(60);
-    future->button.addListener(this, &ofApp::actionClickerino);
+    future->sender.addListener(this, &ofApp::actionClick);
     viewer.setup();
 }
 
@@ -23,9 +23,8 @@ void ofApp::update(){
 }
 
 //---------------------------------------
-void ofApp::actionClickerino(){
+void ofApp::actionClick(){
     float time = 0;
-    
     time = ofMap(future->uiActionSpeed, 0.0, 1.0, 0.001, 0.06);
     
     viewer.color.x = ofLerp(viewer.color.x, future->uiColor->x, time);
@@ -33,7 +32,7 @@ void ofApp::actionClickerino(){
     viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
     
     
-    if (future->cross.crossSwitch) {
+    if (future->cross.crossLoader) {
         viewer.cross.uiAmont = future->cross.uiAmont;
         viewer.cross.uiSpeed = future->cross.uiSpeed;
     }
@@ -42,10 +41,7 @@ void ofApp::actionClickerino(){
         viewer.cross.uiAmont = 0;
         viewer.cross.uiSpeed = 0.0;
     }
-    
         viewer.cross.crossSide = future->cross.crossSide;
-    
-    
 }
 
 //--------------------------------------------------------------
@@ -59,21 +55,9 @@ void ofApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
     viewer.windowResized(w, h);
 }
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
 
 
 

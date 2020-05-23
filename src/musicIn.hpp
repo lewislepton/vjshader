@@ -16,7 +16,6 @@ class musicIn : public ofBaseApp {
 public:
     void setup();
     void update();
-    void draw();
     
     ofParameter<bool> audio;
     ofParameter<float> volume;

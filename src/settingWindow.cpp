@@ -11,23 +11,20 @@
 //--------------------------------------------------------------
 void settingWindow::setup(){
     ofSetWindowTitle("controls");
-    bHide = true;
+    showGui = true;
     cross.setup();
     mySong.setup();
-//    buttonSide.addListener(this, &settingWindow::toggleDirection);
     
     gui.setup();
     gui.add(uiActionSpeed.set("action speed", 0, 0, 1));
     gui.add(uiColor.set("color", ofVec3f(0), ofVec3f(0), ofVec3f(1)));
-    gui.add(button.setup("Sender!"));
-    gui.add(cross.turnSide.set("Change!", false));
-    gui.add(cross.crossSwitch.set("Cross loader", false));
+    gui.add(cross.turnSide.set("Cross direction", false));
+    gui.add(cross.crossLoader.set("Cross loader", false));
     gui.add(cross.uiAmont.set("Cross amount", 1, 1, 25));
     gui.add(cross.uiSpeed.set("Cross speed", 0, 1, 80));
     gui.add(mySong.audio.set("Audio loader", false));
     gui.add(mySong.volume.set("Volume",0.5,0.0,1.0));
-    //    gui.add(cross.edgeA.set("Cross X", 15.0, 10.0, 30.0));
-    //    gui.add(cross.edgeB.set("Cross Y", 40.0, 10.0, 90.0));
+    gui.add(sender.setup("Sender!"));
     
     
     fbo.allocate(640, 360);
@@ -50,7 +47,7 @@ void settingWindow::update(){
     shader.draw(0, 0);
     fbo.end();
     
-    if (cross.crossSwitch)
+    if (cross.crossLoader)
     {
         fbo.begin();
         cross.draw();
@@ -74,7 +71,7 @@ void settingWindow::update(){
 void settingWindow::draw(){
     fbo.draw(0, 0);
     
-    if (bHide){
+    if (showGui){
         gui.draw();
     }
     
@@ -83,7 +80,7 @@ void settingWindow::draw(){
 //--------------------------------------------------------------
 void settingWindow::keyPressed(int key){
     if (key == 'h'){
-        bHide = !bHide;
+        showGui = !showGui;
     }
 }
 
