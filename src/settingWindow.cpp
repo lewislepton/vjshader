@@ -20,8 +20,8 @@ void settingWindow::setup(){
     gui.add(uiColor.set("color", ofVec3f(0), ofVec3f(0), ofVec3f(1)));
     gui.add(cross.turnSide.set("Cross direction", false));
     gui.add(cross.crossLoader.set("Cross loader", false));
-    gui.add(cross.uiAmont.set("Cross amount", 1, 1, 25));
-    gui.add(cross.uiSpeed.set("Cross speed", 0, 1, 80));
+    gui.add(cross.crossAmount.set("Cross amount", 1, 1, 25));
+    gui.add(cross.crossSpeed.set("Cross speed", 0, 1, 200));
     gui.add(mySong.audio.set("Audio loader", false));
     gui.add(mySong.volume.set("Volume",0.5,0.0,1.0));
     gui.add(sender.setup("Sender!"));

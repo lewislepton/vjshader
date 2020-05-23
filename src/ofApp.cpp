@@ -33,13 +33,13 @@ void ofApp::actionClick(){
     
     
     if (future->cross.crossLoader) {
-        viewer.cross.uiAmont = future->cross.uiAmont;
-        viewer.cross.uiSpeed = future->cross.uiSpeed;
+        viewer.cross.crossAmount = future->cross.crossAmount;
+        viewer.cross.crossSpeed = future->cross.crossSpeed;
     }
     else
     {
-        viewer.cross.uiAmont = 0;
-        viewer.cross.uiSpeed = 0.0;
+        viewer.cross.crossAmount = 0;
+        viewer.cross.crossSpeed = 0.0;
     }
         viewer.cross.crossSide = future->cross.crossSide;
 }

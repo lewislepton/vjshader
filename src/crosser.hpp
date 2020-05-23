@@ -21,8 +21,8 @@ public:
     ofxPanel gui;
     ofParameter <bool> turnSide;
     ofParameter<bool> crossLoader;
-    ofParameter<int> uiAmont;
-    ofParameter<float> uiSpeed;
+    ofParameter<int> crossAmount;
+    ofParameter<float> crossSpeed;
     ofParameter<float> edgeA;
     ofParameter<float> edgeB;
     
