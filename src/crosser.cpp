@@ -8,6 +8,7 @@
 #include "crosser.hpp"
 
 void crosser::setup(){
+    ofEnableSmoothing();
     crossSide = true;
 }
 
