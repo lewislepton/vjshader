@@ -12,6 +12,7 @@
 void viewer::setup(){
     ofSetWindowTitle("SettingsWindow");
     cross.setup();
+    rect.setup();
     fbo.allocate(ofGetWidth(), ofGetHeight());
     fbo.begin();
     ofClear(255);
@@ -33,8 +34,8 @@ void viewer::update(){
     
     fbo.begin();
     cross.draw();
+    rect.draw();
     fbo.end();
-    
 }
 
 //--------------------------------------------------------------

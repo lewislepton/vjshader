@@ -13,6 +13,7 @@
 #include "ofxGui.h"
 #include "ofxShaderFilter.h"
 #include "crosser.hpp"
+#include "rectangles.hpp"
 
 class viewer : public ofBaseApp {
     
@@ -29,6 +30,7 @@ public:
     ofFbo fbo;
     
     crosser cross;
+    rectangles rect;
 };
 
 #endif /* viewer_hpp */

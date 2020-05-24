@@ -25,8 +25,6 @@ public:
     ofParameter<float> crossSpeed;
     ofParameter<float> edgeA;
     ofParameter<float> edgeB;
-    
-    bool crossSide;
 };
 
 #endif /* crosser_hpp */

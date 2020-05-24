@@ -14,6 +14,7 @@ void settingWindow::setup(){
     showGui = true;
     cross.setup();
     mySong.setup();
+    rect.setup();
     
     gui.setup();
     gui.add(uiActionSpeed.set("action speed", 0, 0, 1));
@@ -22,6 +23,7 @@ void settingWindow::setup(){
     gui.add(cross.crossLoader.set("Cross loader", false));
     gui.add(cross.crossAmount.set("Cross amount", 1, 1, 25));
     gui.add(cross.crossSpeed.set("Cross speed", 10, 1, 200));
+    gui.add(rect.toggleSpiral.set("Spiral toggle", false));
     gui.add(mySong.audio.set("Audio loader", false));
     gui.add(mySong.volume.set("Volume",0.5,0.0,1.0));
     gui.add(sender.setup("Sender!"));
@@ -47,20 +49,16 @@ void settingWindow::update(){
     shader.draw(0, 0);
     fbo.end();
     
+    fbo.begin();
+    rect.draw();
+    fbo.end();
+
+    
     if (cross.crossLoader)
     {
         fbo.begin();
         cross.draw();
         fbo.end();
-    }
-    
-    if (cross.turnSide) {
-        cross.crossSide = false;
-    }
-    else
-        
-    {
-        cross.crossSide = true;
     }
     
     mySong.update();

@@ -14,6 +14,7 @@
 #include "ofxShaderFilter.h"
 #include "crosser.hpp"
 #include "musicIn.hpp"
+#include "rectangles.hpp"
 
 class settingWindow : public ofBaseApp {
     
@@ -26,7 +27,6 @@ public:
     void windowResized(int w, int h);
     void toggleDirection();
     
-    
     ofxPanel gui;
     ofParameter <bool> uiAction;
     ofParameter <float> uiActionSpeed;
@@ -38,6 +38,7 @@ public:
     
     crosser cross;
     musicIn mySong;
+    rectangles rect;
     
     bool showGui;
 };

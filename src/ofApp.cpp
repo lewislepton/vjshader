@@ -30,6 +30,8 @@ void ofApp::actionClick(){
     viewer.color.x = ofLerp(viewer.color.x, future->uiColor->x, time);
     viewer.color.y = ofLerp(viewer.color.y, future->uiColor->y, time);
     viewer.color.z = ofLerp(viewer.color.z, future->uiColor->z, time);
+    viewer.cross.turnSide = future->cross.turnSide;
+    viewer.rect.toggleSpiral = future->rect.toggleSpiral;
     
     
     if (future->cross.crossLoader) {
@@ -41,7 +43,7 @@ void ofApp::actionClick(){
         viewer.cross.crossAmount = 0;
         viewer.cross.crossSpeed = 0.0;
     }
-        viewer.cross.crossSide = future->cross.crossSide;
+        
 }
 
 //--------------------------------------------------------------

@@ -9,7 +9,6 @@
 #pragma once
 
 #include "ofMain.h"
-//#include "ofxGui.h"
 #include "ofxShader.h"
 #include "crosser.hpp"
 #include "viewer.hpp"

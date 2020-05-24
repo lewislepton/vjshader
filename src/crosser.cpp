@@ -9,7 +9,6 @@
 
 void crosser::setup(){
     ofEnableSmoothing();
-    crossSide = true;
 }
 
 //-------------------------------------------
@@ -24,7 +23,7 @@ void crosser::draw(){
         for (int j = 0; j < crossSpeed; j++) {
             ofPushMatrix();
             ofTranslate(i * 90, j * 90);
-            if (crossSide) {
+            if (turnSide) {
                 ofRotateDeg(ofGetElapsedTimef() * crossSpeed);
             } else {
                 ofRotateDeg(ofGetElapsedTimef() * crossSpeed * -1);
